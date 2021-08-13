@@ -1,0 +1,26 @@
+
+<div class="container">
+  <div class="row">
+    <h2 class="mb-4">Table Data</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Type</th>
+          <th scope="col">5 years prior</th>
+          <th scope="col">4 years prior</th>
+          <th scope="col">3 years prior</th>
+          <th scope="col">2 years prior</th>
+          <th scope="col">1 years prior</th>
+          <th scope="col">Report Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tbl of tableData">
+          <td>{{tbl.type}}</td>
+          <td *ngFor="let prd of tbl.periods">{{prd}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
